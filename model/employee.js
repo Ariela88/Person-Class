@@ -2,11 +2,12 @@ class Employee extends Person {
 
     
     
-    constructor (name, surname, dob, gender, dipartment, client = []){
+    constructor (name, surname, dob, gender, dipartment, client = [], bestClient = []){
         super(name, surname, dob, gender);
         
         this.dipartment = dipartment;
         this.client = client;
+        this.bestClient = bestClient
         
 
     }
@@ -16,7 +17,9 @@ class Employee extends Person {
         const card = 
         '\n' + ' Dipartimento: ' + this.dipartment + '\n' +
 
-            'Clienti: ' + this.clients + '\n';
+            'Clienti: ' + this.clients + '\n'+
+
+            'Il cliente che spende di più è ' + this.client.bestClient ;
 
         return card;
     }
@@ -28,21 +31,16 @@ class Employee extends Person {
     }
 
 
-    bestClientOfAll(){
+    // bestClientOfAll(){
 
-        bestClient = []
 
-        for (let i = 0; i < this.client.length; i++) {
-            maxExp = maxExp+this.client[i].expanses
+    //     for (let i = 0; i < this.client.expanses.length; i++) {
+    //         const money = this.client.expanses.length[i]
+    //         this.bestClient.push(money)
 
-            if (v1 > v2) {
-                return v1
-                
-            } else{
-                return v2
-            }
             
-        } 
-    }
+       
+    //     } return this.bestClient.reduce((a,b)=>a>b?a:b)
+    // }
     
 }
