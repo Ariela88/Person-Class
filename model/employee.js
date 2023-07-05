@@ -26,5 +26,23 @@ class Employee extends Person {
         this.client.push(client)
       
     }
+
+
+    bestClientOfAll(){
+
+        bestClient = []
+
+        for (let i = 0; i < this.client.length; i++) {
+            maxExp = maxExp+this.client[i].expanses
+
+            if (v1 > v2) {
+                return v1
+                
+            } else{
+                return v2
+            }
+            
+        } 
+    }
     
 }

@@ -16,7 +16,9 @@ class Client extends Person {
         const card =
             ' Indirizzo: ' + this.address + '\n' +
 
-            ' Ordine: ' + this.orders + '\n';
+            ' Ordine: ' + this.orders + '\n' +
+
+            'Spese totali: ' + this.expanses;
 
         return card;
     }
@@ -29,15 +31,23 @@ addOrder(order){
   
 }
 
-totalExpanses(unitPrice){
-    this.expanses.push(unitPrice)
+totalExpanses(){
+    let total = 0
+    for (let i = 0; i < this.orders.length; i++) {
+        total=total+this.orders[i].unitPrice
+        
+    }this.expanses.push(total)
 
+
+    } 
+   
+    
 
    }
 
 
 
-}
+
 
 
 
