@@ -9,41 +9,42 @@ class Client extends Person {
         
 
 
+
     }
 
     toString() {
 
-        const card =
-            ' Indirizzo: ' + this.address + '\n' +
+        const card = super.toString() +
+                    ' Indirizzo: ' + this.address + '\n' +
 
-            ' Ordine: ' + this.orders + '\n' +
+                    ' Ordine: ' + this.orders + '\n' +
 
-            'Spese totali: ' + this.expanses;
+                    'Spese totali: ' + this.expanses;
 
         return card;
     }
 
 
 
-addOrder(order){
+    addOrder(order) {
 
-    this.orders.push(order)
-  
-}
+        this.orders.push(order)
 
-totalExpanses(){
-    let total = 0
-    for (let i = 0; i < this.orders.length; i++) {
-        total=total+this.orders[i].unitPrice
-        
-    }this.expanses.push(total)
+    }
 
+    totalExpanses() {
+        let total = 0
+        for (let i = 0; i < this.orders.length; i++) {
+            total = total + this.orders[i].unitPrice
 
-    } 
-   
+        } this.expanses.push(total)
+
     
 
-   }
+
+    }
+
+}
 
 
 
